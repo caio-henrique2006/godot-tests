@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://y8hjrug3pno8"]
+
+[ext_resource type="Script" uid="uid://c652lj85haxal" path="res://camera_2d.gd" id="1_5kiji"]
+[ext_resource type="Texture2D" uid="uid://bos88lx38cpg" path="res://icon.svg" id="1_8350r"]
+[ext_resource type="Script" uid="uid://cpfcr75nlmq3l" path="res://logo.gd" id="2_sq17l"]
+
+[node name="Player" type="Node2D" unique_id=1593443307]
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1943981031]
+texture_repeat = 2
+scale = Vector2(3, 3)
+texture = ExtResource("1_8350r")
+script = ExtResource("2_sq17l")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1621326582]
+position = Vector2(2, 7)
+script = ExtResource("1_5kiji")
+
+[node name="Timer" type="Timer" parent="." unique_id=1985570747]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="Logo" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Camera2D" method="_on_timer_timeout"]

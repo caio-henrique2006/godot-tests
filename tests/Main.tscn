@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://db40qwd7s00g8"]
 
-[node name="Node3D" type="Node3D" unique_id=1583931731]
+[ext_resource type="PackedScene" uid="uid://y8hjrug3pno8" path="res://Player.tscn" id="1_glv2v"]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1883247903]
-transform = Transform3D(1, 0, 0, 0, 0.9185223, 0.39536917, 0, -0.39536917, 0.9185223, 0, 0.8070667, 1.7704306)
+[node name="Node2D" type="Node2D" unique_id=4922176]
+
+[node name="Player" parent="." unique_id=1593443307 instance=ExtResource("1_glv2v")]
+position = Vector2(-94, 27)
